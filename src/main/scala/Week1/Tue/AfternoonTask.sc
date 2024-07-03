@@ -10,6 +10,7 @@ val f = 75 / 9 < 30 && 89 / 6 < 20 // both calculations are true, therefore true
 /*
 Task 2 - Difference between a string and a print line.
 Storing a value in a String variable makes the code more readable and maintainable. This allows developers to modify their functions with ease and helps other developers easily understand the logic behind the source code.
+String returns a different type that println. String returns a string, where as println returns a unit.
 */
 
 /*
