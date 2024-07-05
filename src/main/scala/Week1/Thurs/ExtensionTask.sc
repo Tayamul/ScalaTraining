@@ -12,7 +12,6 @@ val combinedTogether: Seq[Int] = filterOne ++ filterTwo
 
 // Task 2 - The head function returns the first element of a list, and the tail function returns everything except the first element. Use head and tail only to get the 3rd element of a List.
 
-
 val list1: List[Int] = seq1.toList
 val thirdElement: Int = list1.tail.tail.head
 
