@@ -1,5 +1,5 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.TwoNumbersSpec, org.scalatest.tools.Framework$$anon$1@1bb4ba77, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.FizzBuzzSpec, org.scalatest.tools.Framework$$anon$1@1bb4ba77, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.FizzBuzzSpec, org.scalatest.tools.Framework$$anon$1@1508052, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.TwoNumbersSpec, org.scalatest.tools.Framework$$anon$1@1508052, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTwoNumbersSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32madd[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should add numbers[0m[0m
@@ -44,7 +44,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- should handle a large number divisible by 3 and 5[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should handle a large number not divisible by 3 or 5[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 118 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 148 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 21[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 21, failed 0, canceled 0, ignored 0, pending 0[0m[0m
