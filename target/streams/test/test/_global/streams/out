@@ -1,0 +1,25 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.TwoNumbersSpec, org.scalatest.tools.Framework$$anon$1@7249beba, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTwoNumbersSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32madd[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should add numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msubtractYFromX[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should subtract numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32msubtractXFromY[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should subtract numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mmultiply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should multiple numbers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mdivideXByY[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should divide X by Y[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mdivideYByX[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should divide Y by X[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32misAMultiple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return true when one number is a multiple of another number[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32misAMultiple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return false when one number is not a multiple of another number[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 118 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 8, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Week2.Wed.TwoNumbersSpec[0m
