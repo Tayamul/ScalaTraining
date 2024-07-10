@@ -1,4 +1,5 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.TwoNumbersSpec, org.scalatest.tools.Framework$$anon$1@7249beba, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.FizzBuzzSpec, org.scalatest.tools.Framework$$anon$1@1508052, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(Week2.Wed.TwoNumbersSpec, org.scalatest.tools.Framework$$anon$1@1508052, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTwoNumbersSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32madd[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should add numbers[0m[0m
@@ -16,10 +17,38 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return true when one number is a multiple of another number[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32misAMultiple[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return false when one number is not a multiple of another number[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 118 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 8[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 8, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFizzBuzzSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the word 'Fizz' if the input is divisible by 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the word 'Buzz' if the input is divisible by 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the word 'FizzBuzz' if the input is divisible by both 3 and 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should pass the test but return an appropriate error message if the input is 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return an error message if the input is a negative integer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return an error message if the input is less than 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return an appropriate message if the input is not divisible by 3 and 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle the smallest valid input greater than or equal to 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle the smallest valid input greater than or equal to 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle a large number divisible by 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle a large number divisible by 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle a large number divisible by 3 and 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mfizzBuzz[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle a large number not divisible by 3 or 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 148 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 21[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 21, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Week2.Wed.FizzBuzzSpec[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Week2.Wed.TwoNumbersSpec[0m
