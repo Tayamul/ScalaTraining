@@ -1,30 +1,47 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 1 products, 1 sources, 3 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala), unmodified = ...),Set(${BASE}/target/scala-2.13/test-classes/Week2/Wed/TwoNumbersSpec.class),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 1 products, 2 sources, 3 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala, ${BASE}/src/test/scala/Week2/Wed/FizzBuzzSpec.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(${BASE}/target/scala-2.13/test-classes/Week2/Wed/TwoNumbersSpec.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(Week2.Wed.TwoNumbersSpec)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mall 1 sources are invalidated[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Week2.Wed.TwoNumbersSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0 percent of all sources[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/test/scala/Week2/Wed/TwoNumbersSpec.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/tayamul.rai/Documents/Scala Academy/Cohort1 Scala Academy/target/scala-2.13/test-classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /Users/tayamul.rai/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala2-sbt-bridge/2.13.14/scala2-sbt-bridge-2.13.14.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 27b13466 for Scala compiler version 2.13.14[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 65183eb for Scala compiler version 2.13.14[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/tayamul.rai/Documents/Scala Academy/Cohort1 Scala Academy/target/scala-2.13/test-classes:/Users/tayamul.rai/Documents/Scala Academy/Cohort1 Scala Academy/target/scala-2.13/classes:/Users/tayamul.rai/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar:/Users/tayamul.rai/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalactic/scalactic_2.13/3.0.8/scalactic_2.13-3.0.8.jar:/Users/tayamul.rai/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.0.8/scalatest_2.13-3.0.8.jar:/Users/tayamul.rai/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.14/scala-reflect-2.13.14.jar:/Users/tayamul.rai/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/1.2.0/scala-xml_2.13-1.2.0.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.499629875 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.489285542 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from Week2.Wed.TwoNumbersSpec...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Week2.Wed.TwoNumbersSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(Week2.Wed.TwoNumbersSpec)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(Week2.Wed.TwoNumbersSpec,ModifiedNames(changes = UsedName(runTests,[Default]), UsedName(execute$default$5,[Default]), UsedName(execute$default$6,[Default]), UsedName(TheyWord,[Default]), UsedName(runTest,[Default]), UsedName(##,[Default]), UsedName(StringCanWrapperForVerb,[Default]), UsedName(synchronized,[Default]), UsedName(behavior,[Default]), UsedName(finalize,[Default]), UsedName(styleName,[Default]), UsedName(convertEquivalenceToAToBConstraint,[Default]), UsedName(TheyVerbString,[Default]), UsedName(testNames,[Default]), UsedName(nestedSuites,[Default]), UsedName(assertTypeError,[Default]), UsedName(assertCompiles,[Default]), UsedName(clone,[Default]), UsedName(lowPriorityTypeCheckedConstraint,[Default]), UsedName(withClue,[Default]), UsedName(behave,[Default]), UsedName(execute$default$7,[Default]), UsedName(pendingUntilFixed,[Default]), UsedName(run,[Default]), UsedName(convertToStringCanWrapper,[Implicit]), UsedName(trap,[Default]), UsedName(runNestedSuites,[Default]), UsedName(convertToInAndIgnoreMethodsAfterTaggedAs,[Implicit]), UsedName(it,[Default]), UsedName(registerTest,[Default]), UsedName(note,[Default]), UsedName(ItWord,[Default]), UsedName(IgnoreVerbString,[Default]), UsedName(intercept,[Default]), UsedName(they,[Default]), UsedName(AssertionsHelper,[Default]), UsedName(ignore,[Default]), UsedName(===,[Default]), UsedName(==,[Default]), UsedName(pending,[Default]), UsedName(cancel,[Default]), UsedName(isInstanceOf,[Default]), UsedName(registerIgnoredTest,[Default]), UsedName(defaultEquality,[Default]), UsedName(tags,[Default]), UsedName(unconstrainedEquality,[Implicit]), UsedName(Week2;Wed;TwoNumbersSpec;init;,[Default]), UsedName(CheckingEqualizer,[Default]), UsedName(toString,[Default]), UsedName(notifyAll,[Default]), UsedName(hashCode,[Default]), UsedName(assertResult,[Default]), UsedName(execute$default$3,[Default]), UsedName(alert,[Default]), UsedName(assertThrows,[Default]), UsedName(succeed,[Default]), UsedName(getClass,[Default]), UsedName(Equalizer,[Default]), UsedName(BehaviorWord,[Default]), UsedName(convertToStringShouldWrapperForVerb,[Implicit]), UsedName(testDataFor$default$2,[Default]), UsedName(conversionCheckedConstraint,[Default]), UsedName(assert,[Default]), UsedName(suiteName,[Default]), UsedName($init$,[Default]), UsedName(convertToEqualizer,[Implicit]), UsedName(typeCheckedConstraint,[Default]), UsedName(newAssertionFailedException,[Default]), UsedName(IgnoreWord,[Default]), UsedName(convertEquivalenceToAToBConversionConstraint,[Default]), UsedName(TheyVerbStringTaggedAs,[Default]), UsedName(ne,[Default]), UsedName(execute,[Default]), UsedName(InAndIgnoreMethodsAfterTaggedAs,[Default]), UsedName(newTestCanceledException,[Default]), UsedName(shorthandTestRegistrationFunction,[Implicit]), UsedName(withFixture,[Default]), UsedName(eq,[Default]), UsedName(execute$default$4,[Default]), UsedName(convertToStringMustWrapperForVerb,[Implicit]), UsedName(execute$default$2,[Default]), UsedName(lowPriorityConversionCheckedConstraint,[Default]), UsedName(NoArgTest,[Default]), UsedName(fail,[Default]), UsedName(execute$default$1,[Default]), UsedName(testDataFor,[Default]), UsedName(rerunner,[Default]), UsedName(StringShouldWrapperForVerb,[Default]), UsedName(ItVerbStringTaggedAs,[Default]), UsedName(info,[Default]), UsedName(markup,[Default]), UsedName(!=,[Default]), UsedName(StringMustWrapperForVerb,[Default]), UsedName(ItVerbString,[Default]), UsedName(convertEquivalenceToBToAConversionConstraint,[Default]), UsedName(expectedTestCount,[Default]), UsedName(wait,[Default]), UsedName(InAndIgnoreMethods,[Default]), UsedName(equals,[Default]), UsedName(TwoNumbersSpec,[Default]), UsedName(suiteId,[Default]), UsedName(assertionsHelper,[Default]), UsedName(IgnoreVerbStringTaggedAs,[Default]), UsedName(convertToCheckingEqualizer,[Default]), UsedName(assume,[Default]), UsedName(notify,[Default]), UsedName(assertDoesNotCompile,[Default]), UsedName(shorthandSharedTestRegistrationFunction,[Implicit]), UsedName(convertEquivalenceToBToAConstraint,[Default]), UsedName(!==,[Default]), UsedName(convertToInAndIgnoreMethods,[Implicit]), UsedName(asInstanceOf,[Default]), UsedName(createCatchReporter,[Default]))) invalidates 1 classes due to The Week2.Wed.TwoNumbersSpec has the following implicit definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(convertToStringCanWrapper,[Implicit]), UsedName(convertToInAndIgnoreMethodsAfterTaggedAs,[Implicit]), UsedName(unconstrainedEquality,[Implicit]), UsedName(convertToStringShouldWrapperForVerb,[Implicit]), UsedName(convertToEqualizer,[Implicit]), UsedName(shorthandTestRegistrationFunction,[Implicit]), UsedName(convertToStringMustWrapperForVerb,[Implicit]), UsedName(shorthandSharedTestRegistrationFunction,[Implicit]), UsedName(convertToInAndIgnoreMethods,[Implicit]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(Week2.Wed.TwoNumbersSpec)[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m  > [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Week2.Wed.TwoNumbersSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
