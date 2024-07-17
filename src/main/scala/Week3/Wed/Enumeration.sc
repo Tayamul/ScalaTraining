@@ -99,3 +99,34 @@ def caseObjectMatch (weekday1: Weekday): String = {
 abstract class Error (name: String, errorCode: Int)
 case object WeekdayNotFound extends Error (name = "Weekday not found", errorCode = 404)
 
+/** Task */
+
+object Friends extends Enumeration {
+  val Joey = Value("Joey")
+  val Rachel = Value("Rachel")
+  val Ross = Value("Ross")
+  val Chandler = Value("Chandler")
+  val Monica = Value("Monica")
+  val Phoebe = Value("Phoebe")
+}
+Friends.values
+Friends.values.toString()
+
+sealed trait Friends
+case object Joey extends Friends
+case object Rachel extends Friends
+case object Ross extends Friends
+case object Chandler extends Friends
+case object Monica extends Friends
+case object Phoebe extends Friends
+
+def charactersFromFriends (friends: Friends): String = {
+  friends match {
+    case Joey => "Joey"
+    case Rachel => "Rachel"
+    case Ross => "Ross"
+    case Chandler => "Chandler"
+    case Monica => "Monica"
+    case Phoebe => "Phoebe"
+  }
+}
