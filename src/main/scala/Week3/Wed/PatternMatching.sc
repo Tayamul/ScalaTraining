@@ -65,3 +65,37 @@ notification match {
   case VoiceRecording(contactName, link) => "Recording from " + contactName + "With link: " + link
   case _ => "Not valid!"
 }
+
+/**
+ * Task 1 - Accept a string for a flavour/topping and return a different type of pizza for each one.
+ */
+
+//val pepperoni: String = "Pepperoni"
+//val cheese: String = "Cheese"
+//val chicken: String = "Chicken"
+//val mushrooms: String = "Mushrooms"
+//val bacon: String = "Bacon"
+//val tomatoes: String = "Tomatoes"
+//val greenPepper: String = "Green pepper"
+//
+//val typeOfPizza: String = "spicy"
+//
+//typeOfPizza match {
+//  case "spicy" => "American Hot"
+//  case _ => "Not valid!"
+//}
+
+//
+
+val typeOfPizza: String = "chicken"
+
+typeOfPizza match {
+  case "spicy" => "American Hot"
+  case "chicken" | "beef" => "Meat Feast"
+  case "cheese" | "tomato" => "Margarita"
+  case _ => "It's not a pizza!"
+}
+
+val pizzaMeasurements: List[Int] = List(7, 9, 11, 14)
+
+case class Pizza (price: Int, crustParameters: Double)
