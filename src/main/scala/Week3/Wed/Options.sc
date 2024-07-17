@@ -45,3 +45,27 @@ val getCrust: String = pizzaOrder.crust.get // bad practice because it won't wor
 
 // .getOrElse - allows for a default to be given
 val getOrElseCrust: String = pizzaOrder.crust.getOrElse("classic")
+
+
+/** Task */
+case class ChocolateBar (filling: Option[String])
+val chocolateBar1: ChocolateBar = ChocolateBar(filling = Some("nuts"))
+val chocolateBar2: ChocolateBar = ChocolateBar(filling = Some("CARAMEL"))
+val chocolateBar3: ChocolateBar = ChocolateBar(filling = Some("whole milk"))
+val chocolateBar4: ChocolateBar = ChocolateBar(filling = None)
+
+
+def whatFilling (filler: ChocolateBar): String = {
+  filler.filling map (_.toLowerCase) match {
+    case Some("nuts") => "Snickers"
+    case Some("caramel") => "Salted Caramel"
+    case Some("fruits") => "Skittles"
+    case Some(x) => s"$x is not a valid type."
+    case None => "Dairy Milk"
+  }
+}
+
+whatFilling(chocolateBar1)
+whatFilling(chocolateBar2)
+whatFilling(chocolateBar3)
+whatFilling(chocolateBar4)
