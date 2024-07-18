@@ -45,6 +45,26 @@ object ForComp extends App {
 
   println(getTruePencils)
 
+  /** Colour tasks using enums and companion object */
+  sealed trait Colour1
+  object Colour1 {
+    case object Blue extends Colour
+    case object Green extends Colour
+    case object Yellow extends Colour
+
+    val values: List[Colour] = List(Blue, Green, Yellow)
+  }
+
+  case class Pencil1(colour: Colour, sharpened: Boolean)
+
+  def getPencils1: List[Pencil] = for {
+    colour <- Colour1.values
+    sharpened <- List(true, false)
+  } yield Pencil(colour, sharpened)
+
+  println(getPencils1)
+
+
 /** Task1 */
 //sealed trait Name
 //case object Tom extends Name
