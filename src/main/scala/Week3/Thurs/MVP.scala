@@ -52,4 +52,9 @@ object MVP extends App {
     } yield s"${person.name} can obtain the maximum mortgage of £${incomeX4}."
   }
 
+  def isDepositEnough (deposit: Double, purchasePrice: Double): Either[String, Double] = {
+    val requiredDeposit = 0.1 * purchasePrice
+
+    if (deposit >= requiredDeposit) Right(deposit) else Left(s"The deposit £${deposit} is less than 10% of the purchase price £${purchasePrice}.")
+  }
 }

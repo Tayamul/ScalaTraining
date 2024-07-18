@@ -76,4 +76,21 @@ class MVPSpec extends AnyWordSpec with Matchers {
       }
     }
   }
+
+  "isDepositEnough" should {
+    "return a Right" when {
+      "the deposit amount is at least 10% of the purchase price" in {
+        val deposit: Double = 50000
+        val purchasePrice: Double = 200000
+        isDepositEnough(deposit, purchasePrice) shouldBe Right(deposit)
+      }
+    }
+    "return a Left" when {
+      "the deposit amount is less than 10% of the purchase price" in {
+        val deposit: Double = 500
+        val purchasePrice: Double = 200000
+        isDepositEnough(deposit, purchasePrice) shouldBe Left(s"The deposit £${deposit} is less than 10% of the purchase price £${purchasePrice}.")
+      }
+    }
+  }
 }
