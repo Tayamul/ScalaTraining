@@ -20,7 +20,11 @@ package Week3.Thurs
 object MVP extends App {
 
   case class Person (name: String, income: Double, deposit: Double, priceOfFlat: Double, creditScore: Double)
+
   val Samantha: Person = Person(name = "Samantha", income = 45000, deposit = 20000, priceOfFlat = 280000, creditScore = 577)
+  object JHus extends Person(name = "JHus", income = 200000, deposit = 160000, priceOfFlat = 1500000, creditScore = 890)
+  object DiggaD extends Person(name = "DiggaD", income = 100000, deposit = 20000, priceOfFlat = 250000, creditScore = 768)
+  object Stormzy extends Person(name = "Stormzy", income = 85000, deposit = 50000, priceOfFlat = 450000, creditScore = 489)
 
   def getMaxMortgage (income: Double): Either[String, Double] = {
 //    if (income <= 0) 0 else income * 4
@@ -64,4 +68,8 @@ object MVP extends App {
     } yield s"${person.name} can get a mortgage of ${person.priceOfFlat - person.deposit}."
   }
 
+  println(isEligibleForMortgage(Samantha))
+  println(isEligibleForMortgage(JHus))
+  println(isEligibleForMortgage(DiggaD))
+  println(isEligibleForMortgage(Stormzy))
 }
