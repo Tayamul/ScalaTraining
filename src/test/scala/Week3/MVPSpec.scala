@@ -10,26 +10,19 @@ class MVPSpec extends AnyWordSpec with Matchers {
   val mortgage: Double = Dave.priceOfHouse - Dave.deposit
   val incomeX4: Double = Dave.income * 4
 
-  "isEligibleForMortgage" should {
-    "return a Left" when {
-      "the yearly income is less than four times the mortgage amount" in {
-        isEligibleForMortgage(Dave) shouldBe Left(s"${Dave.name} is not eligible for mortgage.")
+  "getMaxMortgage" should {
+    "return the salary amount multiplied by 4" in {
+      val income = 20000
+      val expected = income * 4
+      getMaxMortgage(income) shouldBe expected
       }
+    "return 0 if the input is 0" in {
+      getMaxMortgage(0) shouldBe 0
     }
-    "return a Right" when {
-      "the yearly income is more than four times the mortgage amount" in {
-        isEligibleForMortgage(Dave) shouldBe Right(s"${Dave.name} is eligible for mortgage.")
-      }
+    "return 0 if the input is a negative integer" in {
+      getMaxMortgage(-35000) shouldBe 0
     }
   }
-
-//  "acceptableDeposit" should {
-//    "return a Left" when {
-//      "the deposit amount is not 10% of the purchase price" in {
-//        acceptableDeposit(20000)
-//      }
-//    }
-//  }
 
   "checkCreditScore" should {
     "return a Right" when {
