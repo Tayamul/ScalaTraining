@@ -44,4 +44,33 @@ object ForComp extends App {
   } yield Pencil(colour, sharpened)
 
   println(getTruePencils)
+
+/** Task1 */
+//sealed trait Name
+//case object Tom extends Name
+//case object Roshan extends Name
+//case object Joe extends Name
+//case object Spencer extends Name
+
+//  case class Person (name: Name)
+//def namesToCapital (listOfNames: List[String]): List[Person] = for {
+//  listOfNames <- List(listOfNames map (_.toUpperCase()))
+//} yield listOfNames
+
+  def namesToCapital (names: List[String]): List[String] = {
+    for {
+      names <- names.map(x => x.toUpperCase)
+    } yield names
+  }
+  println(namesToCapital(List("tom", "arie", "spencer", "joe")))
+
+  def capitaliseNames (names: List[String]): List[String] = {
+    val lowercaseNames = names.map(x => x.toLowerCase())
+    for {
+      names <- lowercaseNames.map(x => x.capitalize)
+    } yield names
+  }
+  println(capitaliseNames(List("tom", "arie", "spencer", "joe")))
+
 }
+
