@@ -31,7 +31,6 @@ object MVP extends App {
     }
   }
 
-
   def checkCreditScore (creditScore: Double): Either[String, Double] = {
     // for edge cases - can the creditScore's value ever be 0 or a negative integer?
     // what about the highest credit score value?
@@ -57,4 +56,12 @@ object MVP extends App {
 
     if (deposit >= requiredDeposit) Right(deposit) else Left(s"The deposit £${deposit} is less than 10% of the purchase price £${purchasePrice}.")
   }
+
+  def isEligibleForMortgage (person: Person): Either[String, String] = {
+    for {
+      enoughDepositOrNot <- isDepositEnough(person.deposit, person.priceOfFlat)
+      getMortgageOrNot <- getMortgage(person)
+    } yield s"${person.name} can get a mortgage of ${person.priceOfFlat - person.deposit}."
+  }
+
 }

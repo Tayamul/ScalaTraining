@@ -6,10 +6,18 @@ import org.scalatest.wordspec.AnyWordSpec
 
 class MVPSpec extends AnyWordSpec with Matchers {
 
-  val Dave: Person = Person(name = "Dave",  income = 80000, deposit = 20000, priceOfFlat = 280000, creditScore = 577)
-  val Jake: Person = Person(name = "Dave",  income = 80000, deposit = 20000, priceOfFlat = 280000, creditScore = 450)
-//  val mortgage: Double = Dave.priceOfFlat - Dave.deposit
+  // individual with not enough deposit
+  val Dave: Person = Person(name = "Dave",  income = 45000, deposit = 20000, priceOfFlat = 280000, creditScore = 577)
   val incomeX4: Double = Dave.income * 4
+
+  // individual that does not meet the credit score requirement
+  val Jake: Person = Person(name = "Jake",  income = 45000, deposit = 50000, priceOfFlat = 280000, creditScore = 450)
+
+  // individual eligible for mortgage
+  val Paul: Person = Person(name = "Paul",  income = 45000, deposit = 60000, priceOfFlat = 280000, creditScore = 550)
+
+  // individual not meeting any of the requirements
+  val Mike: Person = Person(name = "Mike",  income = 4000, deposit = 6000, priceOfFlat = 300000, creditScore = 444)
 
   "getMaxMortgage" should {
     "return a Right" when {
@@ -93,4 +101,19 @@ class MVPSpec extends AnyWordSpec with Matchers {
       }
     }
   }
+
+  "isEligibleForMortgage" should {
+    "return a Right" when {
+      "the individual meets all the requirement" in {
+        isEligibleForMortgage(Paul) shouldBe Right(s"${Paul.name} can get a mortgage of ${Paul.priceOfFlat - Paul.deposit}.")
+      }
+    }
+    "return a Left" when {
+      "the individual does not meet any of the requirements" in {
+        // The specific error message occurs because our initial check verifies whether the individual's deposit amount meets the required criteria.
+        isEligibleForMortgage(Mike) shouldBe Left(s"The deposit £${Mike.deposit} is less than 10% of the purchase price £${Mike.priceOfFlat}.")
+      }
+    }
+  }
+
 }
