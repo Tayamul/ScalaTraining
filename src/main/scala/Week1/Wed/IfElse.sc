@@ -17,6 +17,8 @@ if (weather == "cold") {
   println("Take nothing.")
 }
 
+
+
 // Task 1
 val score: Int = 109
 
