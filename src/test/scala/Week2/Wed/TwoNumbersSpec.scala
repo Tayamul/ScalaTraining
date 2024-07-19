@@ -1,8 +1,8 @@
 package Week2.Wed
 
-import org.scalatest.FlatSpec
+import org.scalatest.flatspec.AnyFlatSpec
 
-class TwoNumbersSpec extends FlatSpec {
+class TwoNumbersSpec extends AnyFlatSpec {
 
   "add" should "add numbers" in {
     val nums = new TwoNumbers(1, 2) // new instance of the class
