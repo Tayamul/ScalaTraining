@@ -168,4 +168,29 @@ println("\nnum of elements (standard - match): " + numOfElementsMatch(List("a", 
   }
 
   println("\nobject to string: " + objectsToString(List(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday )))
+
+
+
+  /** Task */
+  sealed trait Fruit
+  case object Banana extends Fruit
+  case object Apple extends Fruit
+  case object Orange extends Fruit
+  case object Grape extends Fruit
+  case object Watermelon extends Fruit
+
+  def countFruit (fruits: List[Fruit], targetFruit: Fruit): Int = {
+    def helperFruit (remainingFruits: List[Fruit], acc: Int): Int = {
+      remainingFruits match {
+        case Nil => acc
+        case ::(head, tail) =>
+          val updatingAccumulator = if (head == targetFruit) acc + 1 else acc // add to count only if present
+        helperFruit(tail, updatingAccumulator)
+      }
+    }
+   helperFruit(fruits, 0)
+  }
+  val fruitList: List[Fruit] = List(Apple, Watermelon, Apple, Orange, Banana, Apple, Banana, Grape)
+  val targetFruit: Fruit = Apple
+  println(s"\ncount of $targetFruit: " + countFruit(fruitList, targetFruit))
 }
