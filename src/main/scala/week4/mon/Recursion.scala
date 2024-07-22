@@ -119,4 +119,53 @@ println("\nnum of elements (standard - match): " + numOfElementsMatch(List("a", 
     case ::(head, tail) => numOfElementsMatchTail(tail, acc + 1)
   }
   println("\nnum of elements (tail - match): " + numOfElementsMatchTail(List("a", "b", "c", "d"), 0))
+
+
+
+
+
+  /** Recursion with enums */
+  object DayOfWeek extends Enumeration {
+    type DayOfWeek = Value // allows DayOfWeek to be used as a type
+    val Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday = Value
+  }
+
+  def enumListToString(dayOfWeekEnums: List[DayOfWeek.Value]): String = {
+    def enumListHelper(daysEnums: List[DayOfWeek.Value], acc: String): String = {
+      daysEnums match {
+        case Nil => acc
+        case ::(head, tail) =>
+          val makeNiceToRead = if (acc.isEmpty) "" else ", "
+          enumListHelper(tail, acc + makeNiceToRead + head.toString)
+      }
+    }
+    enumListHelper(dayOfWeekEnums, "")
+  }
+
+  println("\nenum to string method: " + enumListToString(List(DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday)))
+
+
+  /** Recursion with case objects */
+  sealed trait DayOfWeek
+  case object Monday extends DayOfWeek
+  case object Tuesday extends DayOfWeek
+  case object Wednesday extends DayOfWeek
+  case object Thursday extends DayOfWeek
+  case object Friday extends DayOfWeek
+  case object Saturday extends DayOfWeek
+  case object Sunday extends DayOfWeek
+
+  def objectsToString(listDays: List[DayOfWeek]): String = {
+    def helperMethod (remainingListOfDays: List[DayOfWeek], acc: String): String = {
+      remainingListOfDays match {
+        case Nil => acc
+        case ::(head, tail) =>
+          val makeNiceToRead: String = if (acc.isEmpty) "" else ", "
+          helperMethod(tail, acc + makeNiceToRead + head.toString)
+      }
+    }
+    helperMethod(listDays, "")
+  }
+
+  println("\nobject to string: " + objectsToString(List(Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday )))
 }
