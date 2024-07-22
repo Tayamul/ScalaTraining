@@ -49,5 +49,19 @@ object Recursion extends App {
    * 3rd call: factorialHelper(2, 2 * (3*(4*1))) = (1, 24)
    * 4th call: x == 1 ==> hitting the 'if' and returning the acc which is currently stored at 24.
    */
-  println(smartFactorial(400000))
+//  println(smartFactorial(400000))
+
+  /**
+   * Tail rec -> concatenate a string n times
+   * Without the helper method
+   */
+    @tailrec
+  def concatenateWords (aWord: String, n: Int, acc: String): String = {
+    if (n <= 0) acc
+    else {
+      concatenateWords(aWord, n - 1, aWord + acc)
+    }
+  }
+  println("\nTail rec - concatenate words")
+  println(concatenateWords("hello ", 30, "BYE"))
 }
