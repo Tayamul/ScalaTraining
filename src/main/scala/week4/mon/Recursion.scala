@@ -17,8 +17,8 @@ object Recursion extends App {
       finalResult
     }
   }
-  println("\nfactorial method (4) - standard recursion:")
-  println(factorial(4))
+//  println("\nfactorial method (4) - standard recursion:")
+//  println(factorial(4))
 //  println(factorial(400000000)) // stack overflow error - limited memory on the call stack
 
   /** Tail recursion
@@ -41,8 +41,8 @@ object Recursion extends App {
     }
     factorialHelper(n, 1)
   }
-  println("\nFactorial (4) - tail rec:")
-  println(smartFactorial(4))
+//  println("\nFactorial (4) - tail rec:")
+//  println(smartFactorial(4))
 
   /** 1st call: factorialHelper(4-1, 4*1) = (3, 4)
    * 2nd call: factorialHelper(3-1, 3*(4*1)) = (2, 12)
@@ -62,6 +62,61 @@ object Recursion extends App {
       concatenateWords(aWord, n - 1, aWord + acc)
     }
   }
-  println("\nTail rec - concatenate words")
-  println(concatenateWords("hello ", 30, "BYE"))
+//  println("\nTail rec - concatenate words")
+//  println(concatenateWords("hello ", 30, "BYE"))
+
+
+  /** Task - write a method that will find out how many elements are in a list of string
+   * split the param into array,
+   * array.length to find out how many elements in the list of strings
+   * return the number
+   * */
+
+  // Standard recursion
+  def printNumberOfElements (listOfStrings: List[String]): Int = {
+    if (listOfStrings.isEmpty) 0
+    else {
+      1 + printNumberOfElements(listOfStrings.tail)
+    }
+  }
+  println("\nnum of elements (standard): " + printNumberOfElements(List("Hello", "world", "world", "world", "world")))
+  println("\nnum of elements (standard): " + printNumberOfElements(List()))
+
+  // Tail recursion
+//  def numberOfElements (strings: List[String]) = {
+//    @tailrec
+//    def helperFunctionTail(str: List[String], acc: Int): Int = {
+//      if (str.length <= 1) acc
+//      else {
+//        helperFunctionTail(str.tail, acc + 1)
+//      }
+//    }
+//  }
+
+  @tailrec
+  def numberOfElements (listOfStrings: List[String], acc: Int): Int = {
+    if (listOfStrings.isEmpty) acc
+    else numberOfElements(listOfStrings.tail, acc + 1)
+  }
+  println("\nnum of elements (tail): " + numberOfElements(List("Hello", "world", "world"), 0))
+
+
+  /** Standard rec with match */
+  def numOfElementsMatch (list: List[String]): Int = list match {
+    case Nil => 0
+    case ::(head, tail) =>
+      println(s"Current head: $head")
+      println(s"Current tail: $tail")
+      1 + numOfElementsMatch(tail)
+  }
+println("\nnum of elements (standard - match): " + numOfElementsMatch(List("a", "b", "c")))
+
+
+  /** Match for tail rec */
+    @tailrec
+  def numOfElementsMatchTail (list: List[String], acc: Int): Int = list match {
+    case Nil => acc
+    case ::(head, tail) => numOfElementsMatchTail(tail, acc + 1)
+  }
+  println("\nnum of elements (tail - match): " + numOfElementsMatchTail(List("a", "b", "c", "d"), 0))
 }
