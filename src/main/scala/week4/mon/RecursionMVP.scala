@@ -79,4 +79,26 @@ object RecursionMVP extends App {
 
   println("\nList of Euro Teams using case object: " + printTeamsUsingCaseObject(EuroTeams.allTeams, ""))
 
+
+
+
+
+  /** Task 3 - Using recursion and given a list with all integers from 1 to 20 inclusive, create a method called "isEven" that checks if a number, at a given index position, is even or not. The return type of this method should be Either[String, Boolean]. */
+
+  def isEven (list: List[Int]): Either[String, Boolean] = {
+    @tailrec
+    def helperIsEven(remainingList: List[Int], acc: String): Either[String, Boolean] = {
+      remainingList match {
+        case Nil => Left(acc)
+        case ::(head, tail) =>
+          val isEvenOrOdd: Either[String, Boolean] = if (head % 2 == 0) Right(true) else Left("Not even")
+          helperIsEven(tail, acc + isEvenOrOdd)
+      }
+    }
+    helperIsEven(list, "")
+  }
+
+  val listOfInt: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+  println("\nIs even or not: " + isEven(listOfInt))
+
 }
