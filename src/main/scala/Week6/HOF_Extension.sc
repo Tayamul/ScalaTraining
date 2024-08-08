@@ -16,3 +16,27 @@ def maxListNum(listOfDoubles: List[Double], function: (Double, Double) => Double
   listOfDoubles.reduce(function)
 }
 maxListNum(doublesList, max)
+
+
+/**
+ * Task 2.
+ * Create a function named 'applyFunc' that takes two parameters; a function of type Int => Int and an Int value. The 'applyFunc' should apply the function to the integer and return the result.
+ * Create two functions, one named 'double' that doubles the input number, and one named 'square' that squares the input number.
+ * Use the 'applyFunc' to apply the 'double' and 'square' methods to the number 5 and print the result.
+ */
+
+def applyFunc(function: Int => Int, num: Int): Int = {
+  function(num)
+}
+
+def double(num: Int): Int = {
+  num + num
+}
+def square(num: Int): Int = {
+  num * num
+}
+
+val doubledResult = applyFunc(double, 5)
+val squaredResult = applyFunc(square, 5)
+s"The double of 5 is: $doubledResult"
+s"The square of 5 is: $squaredResult"
