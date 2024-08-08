@@ -114,3 +114,33 @@ val transformAndConcatenate = stringsList.foldLeft(""){ (acc, value) =>
   (acc + " " + value.capitalize).trim()
 }
 val transformAndConcatenateUsingMap = stringsList.map( word => (word.capitalize)).foldLeft("")(_ + " " + _).trim()
+
+
+/** Returning functions */
+  // each def is a mini HOF
+def smallRise(salary: Double): (Int, Double) => Double = {
+  (lengthOfEmployment: Int, salary: Double) => salary * 1.1
+}
+
+def mediumRise(salary: Double): (Int, Double) => Double = {
+  (lengthOfEmployment: Int, salary: Double) => salary * 1.2
+}
+
+def largeRise(salary: Double): (Int, Double) => Double = {
+  (lengthOfEmployment: Int, salary: Double) => salary * 1.5
+}
+
+case class Employee(name: String, salary: Double, lengthOfEmployment: Int)
+
+def getPayRise(employee: Employee): (Int, Double) => Double = {
+  employee.lengthOfEmployment match {
+    // should be able to handle negative numbers or a 0 input maybe
+    case year if (year <= 3) => smallRise(employee.salary)
+    case year if (year <= 5) => mediumRise(employee.salary)
+    case year if (year > 5) => largeRise(employee.salary)
+  }
+}
+
+val Amanda: Employee = Employee("Amanda", 30000, 2)
+val choosePayRise = getPayRise(Amanda)(2, 30000)
+//val getNewSalary = choosePayRise(Amanda.lengthOfEmployment, Amanda.salary)
