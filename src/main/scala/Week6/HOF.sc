@@ -144,3 +144,31 @@ def getPayRise(employee: Employee): (Int, Double) => Double = {
 val Amanda: Employee = Employee("Amanda", 30000, 2)
 val choosePayRise = getPayRise(Amanda)(2, 30000)
 //val getNewSalary = choosePayRise(Amanda.lengthOfEmployment, Amanda.salary)
+
+
+/** Task 2 */
+case class Item(price: Double)
+
+def lessThanTwenty(price: Double): Double => Double = {
+  price => price * 0.8
+}
+
+def twentyToFifty(price: Double): Double => Double = {
+  price => price * 0.6
+}
+
+def over50(price: Double): Double => Double = {
+  price => price * 0.5
+}
+
+def getDiscount(item: Item): Double => Double = {
+  item.price match {
+    case p if (p < 20) => lessThanTwenty(p)
+    case p if (p >= 20) && (p <= 50) => twentyToFifty(p)
+    case p if (p < 20) => over50(p)
+  }
+}
+
+val tShirt: Item = Item(18.5)
+val chooseDiscount = getDiscount(tShirt)
+val updatedPrice = chooseDiscount(tShirt.price)
