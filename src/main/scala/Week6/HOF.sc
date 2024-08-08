@@ -100,3 +100,17 @@ val foldAnimalsRight = animalList.foldRight(List[String]()) { (animal, acc) =>
   acc :+ s"$sirOrMadam ${animal.name}"
 }
 println(foldAnimalsRight)
+
+
+
+/** Task 1 */
+val productOfTheList = numbers.foldLeft(1)(_ * _)
+val trueInts = numbers.filter(num => num % 2 == 0)
+
+val numberOfCharacters = stringsList.foldLeft(0){ (acc, value) =>
+  value.length + acc
+}
+val transformAndConcatenate = stringsList.foldLeft(""){ (acc, value) =>
+  (acc + " " + value.capitalize).trim()
+}
+val transformAndConcatenateUsingMap = stringsList.map( word => (word.capitalize)).foldLeft("")(_ + " " + _).trim()
