@@ -40,3 +40,20 @@ val doubledResult = applyFunc(double, 5)
 val squaredResult = applyFunc(square, 5)
 s"The double of 5 is: $doubledResult"
 s"The square of 5 is: $squaredResult"
+
+
+/**
+ * Task 3
+ * Create a function named 'power' that takes an integer 'exponent' and returns a function Int => Int.
+ * The returned function should take a 'base' integer and raise it to the power of 'exponent'. (HINT:
+ * research and use Math.pow))
+ * Use the 'power' function to create a 'square' function that squares numbers (base 2).
+ * Apply the 'square' function to the number 6 and print the result.
+ */
+
+def power(exponent: Int): Int => Int = {
+  (base: Int) => math.pow(base, exponent).toInt
+}
+
+val square: Int => Int = power(2)
+s"The square of 6 is ${square(6)}."
